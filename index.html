@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TinWin Tech</title>
+  <meta name="description" content="TinWin Tech — projects, experiments, and a simple way to reach me.">
+  <meta property="og:title" content="TinWin Tech">
+  <meta property="og:description" content="Projects, experiments, and a simple way to reach me.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tinwin.tech">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪐</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0d10; --card:#101319; --text:#e8eef5; --muted:#a9b6c7; --accent:#5fb3ff; --ring:rgba(95,179,255,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 800px at 20% 10%, #0f1320 0%, var(--bg) 60%),
+               radial-gradient(1000px 700px at 100% 100%, #0e1422 0%, var(--bg) 55%);
+      color:var(--text); font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Inter", Arial, sans-serif;
+      display:grid; place-items:center; padding:24px;
+    }
+    .card{
+      width:min(680px, 100%); background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      backdrop-filter:saturate(140%) blur(6px); border:1px solid rgba(255,255,255,.08);
+      border-radius:20px; padding:28px 28px 24px; box-shadow:0 10px 40px rgba(0,0,0,.35);
+    }
+    .logo{font-weight:700; letter-spacing:.4px; display:flex; align-items:center; gap:10px; margin-bottom:6px}
+    .dot{width:10px;height:10px;border-radius:10px;background:var(--accent);box-shadow:0 0 24px var(--accent)}
+    h1{margin:4px 0 8px;font-size:clamp(28px,4.5vw,44px);line-height:1.15}
+    p.sub{margin:0 0 18px;color:var(--muted)}
+    .row{display:flex; flex-wrap:wrap; gap:12px; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius:12px; text-decoration:none; font-weight:600;
+      color:var(--text); border:1px solid rgba(255,255,255,.12); background:#131826;
+      transition:.18s transform ease, .18s box-shadow ease, .18s border-color ease;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:var(--accent); box-shadow:0 6px 22px var(--ring)}
+    .btn.primary{background:var(--accent); color:#071019; border-color:transparent}
+    .sep{height:1px;background:rgba(255,255,255,.08);margin:18px 0}
+    .fine{font-size:12.5px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+    .tile{padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:#0f1421}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <div class="logo"><span class="dot" aria-hidden="true"></span><span>TinWin Tech</span></div>
+    <h1 id="title">Simple, fast, and useful.</h1>
+    <p class="sub">Landing page for links and updates. Built to load quick and not get in your way.</p>
+
+    <div class="row">
+      <a class="btn primary" href="https://tinwin.rocks/vote" rel="noopener">Vote for Tin</a>
+      <a class="btn" href="mailto:contact@tinwin.tech">Email</a>
+      <a class="btn" href="https://github.com/floppskii" rel="noopener">GitHub</a>
+      <a class="btn" href="https://tinwin.rocks" rel="noopener">Shortlinks</a>
+    </div>
+
+    <div class="sep"></div>
+
+    <section aria-label="Highlights" class="grid">
+      <div class="tile">
+        <strong>Projects</strong><br />
+        AI study tools, websites, and small utilities. Shipping fast.
+      </div>
+      <div class="tile">
+        <strong>Now</strong><br />
+        Class president campaign. Cleaner halls. Better vibes. Real follow-through.
+      </div>
+    </section>
+
+    <p class="fine">© <span id="y"></span> TinWin Tech</p>
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
